@@ -1,30 +1,68 @@
 package com.example.beyondLangiage.translator;
+
 import com.google.cloud.translate.*;
 
 public class Translator {
 
-    
-    
-    
-    
-    
- // TODO(developer): Uncomment these lines.
-  
-  public void sarb() {
-  Translate translate = TranslateOptions.getDefaultInstance().getService();
+    public static Translate translate = TranslateOptions.getDefaultInstance().getService();
 
-  
- 
- 
-Detection s = (translate.detect("ਮੈਂ ਤੈਨੂੰ ਤੰਗ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹਾਂ"));
- 
-System.out.println(s.getLanguage());
+
  
 
- System.out.printf("Translated Text: "+ translate.translate("ਮੈਂ ਤੈਨੂੰ ਤੰਗ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹਾਂ", Translate.TranslateOption.targetLanguage("en")).getTranslatedText());
+    /**
+     * 
+     * @param text = language to detect
+     * @return detected language
+     */
+    public static String detectedLanguage(String text) {
+
+        Detection d = translate.detect(text);
+
+        return d.getLanguage();
+
+    }
+
+    
+    /**
+     * 
+     * @param text
+     * @return translated text in english
+     */
+    public static String translateToEnglish(String text) {
+
+        return translate.translate(text, Translate.TranslateOption.targetLanguage("en")).getTranslatedText();
+
+    }
+
+    /**
+     * 
+     * @param text
+     * @return translated text in punjabi
+     */
+    public static String translateToPunjabi(String text) {
+
+        return translate.translate(text, Translate.TranslateOption.targetLanguage("pa")).getTranslatedText();
+
+    }
+    
+    /**
+     * 
+     * @param text
+     * @return translated text in french
+     */
+    public static String translateToFrench(String text) {
+
+        return translate.translate(text, Translate.TranslateOption.targetLanguage("fr")).getTranslatedText();
+
+    }
     
     
     
     
-}
+    
+    
+    
+    
+    
+    
 }

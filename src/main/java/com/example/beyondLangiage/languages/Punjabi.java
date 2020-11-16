@@ -82,11 +82,58 @@ public String getCancelLink() {
 } 
 
     
+    //Dadhboard page
+
+
+@Override
+public String getTitle() {
+    // TODO Auto-generated method stub
+    return "ਤੁਹਾਡਾ ਭਾਸ਼ਾ ਤੋਂ ਪਰੇ ਐਪ ਵਿੱਚ |";
+}
+
+@Override
+public String getPostMsg() {
+    // TODO Auto-generated method stub
+    return "ਇੱਕ ਸੁਨੇਹਾ ਭੇਜੋ:";
+}
+
+@Override
+public String getPostButton() {
+    // TODO Auto-generated method stub
+    return "ਪੋਸਟ ਕਰੋ";
+}
+
+@Override
+public String getHint() {
+    // TODO Auto-generated method stub
+    return "ਤੁਸੀਂ ਕੀ ਲਿਖਣ ਲਈ ਸੋਚ ਰਹੇ ਹੋ?";
+}
+
+@Override
+public String getList() {
+    // TODO Auto-generated method stub
+    return "ਸੂਚੀ ਦ੍ਰਿਸ਼";
+}
+
+@Override
+public String getGrid() {
+    // TODO Auto-generated method stub
+    return "ਵਰਗ ਦ੍ਰਿਸ਼";
+}
+    
+
     
     
+    @Override
+    public String getSent() {
+        // TODO Auto-generated method stub
+        return "ਸੁਨੇਹਾ ਪੋਸਟ ਕੀਤਾ ਗਿਆ ਹੈ ...";
+    }
     
-    
-    
+    @Override
+    public String getWelcome() {
+        return "ਸਵਾਗਤ ਹੈ";
+    }
     
     
     

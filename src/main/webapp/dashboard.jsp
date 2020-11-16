@@ -77,7 +77,17 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
+<script>
+function myFunction() {
+  var form = document.getElementById("posted")
+  var originalContent = form.innerHTML
+  form.innerHTML = "${dash.getSent()}"
+  setTimeout(function() {
+    form.innerHTML = originalContent
+  }, 1000)
+}
 
+</script>
 <style media="screen">
 
 #heading {
@@ -173,6 +183,11 @@ border: 1px solid;
         box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 
     }
+    
+    .row p {
+    
+    font-size: 20px;
+    }
 </style>
 
 
@@ -181,49 +196,30 @@ border: 1px solid;
 
   <body style="background-image: url('bg.jpg');">
 <br>
-<div id="heading">        Welcome ${name} to BeyLang Chat         </div>
+<div id="heading">        ${dash.getWelcome()} ${name} ${dash.getTitle()}         </div>
 
 <br><br>
 <div id="msg">
-  <form class="form-inline" action="/action_page.php">
-    <label for="message">Post a Message:</label>
-    <input type="text" id="message" placeholder="What are you thinking to write ?" name="email">
+  <form class="form-inline" action="post">
+    <label for="message">${dash.getPostMsg()}</label>
+    <input type="text" id="message" placeholder="${dash.getHint()}" name="message">
 
-    <button class="submit" type="submit"><b>Submit</b></button>
+    <button class="submit" type="submit"><b>${dash.getPostButton()}</b></button>
   </form>
 </div>
 
-<h2>List View or Grid View</h2>
 
-<p>Click on a button to choose list view or grid view.</p>
 
 <div id="btnContainer">
-  <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button>
-  <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+  <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> ${dash.getList()}</button>
+  <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> ${dash.getGrid()}</button>
 </div>
 <br>
 
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    <p>Some text..</p>
-  </div>
-</div>
 
-<div class="row">
-  <div class="column" style="background-color:#ccc;">
-    <h2>Column 3</h2>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#ddd;">
-    <h2>Column 4</h2>
-    <p>Some text..</p>
-  </div>
-</div>
+${posts }
+
+
 
 
 

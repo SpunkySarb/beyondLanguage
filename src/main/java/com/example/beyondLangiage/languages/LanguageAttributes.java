@@ -18,11 +18,103 @@ public abstract class LanguageAttributes {
            enterPassword="Enter Password",
            register="Register",
            cancel="Cancel",
-           cancelLink="home"
+           cancelLink="home",
+           
+           
+           
+           //dashboard page
+           title="to Beyond Language App",
+           postMsg="Post a Message:",
+           hint= "What are you thinking to write ?",
+           postButton="POST",
+           list="List View",
+           grid= "Grid VIew",
+           sent= "Message has been posted...",
+           welcome="Welcome "
            
            
            
            ;
+
+    public String getWelcome() {
+        return welcome;
+    }
+
+
+    public void setWelcome(String welcome) {
+        this.welcome = welcome;
+    }
+
+
+    public String getTitle() {
+        return title;
+    }
+
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+
+    public String getPostMsg() {
+        return postMsg;
+    }
+
+
+    public void setPostMsg(String postMsg) {
+        this.postMsg = postMsg;
+    }
+
+
+    public String getHint() {
+        return hint;
+    }
+
+
+    public void setHint(String hint) {
+        this.hint = hint;
+    }
+
+
+    public String getPostButton() {
+        return postButton;
+    }
+
+
+    public void setPostButton(String postButton) {
+        this.postButton = postButton;
+    }
+
+
+    public String getList() {
+        return list;
+    }
+
+
+    public void setList(String list) {
+        this.list = list;
+    }
+
+
+    public String getGrid() {
+        return grid;
+    }
+
+
+    public void setGrid(String grid) {
+        this.grid = grid;
+    }
+
+
+    public String getSent() {
+        return sent;
+    }
+
+
+    public void setSent(String sent) {
+        this.sent = sent;
+    }
+
 
     public String getCancelLink() {
         return cancelLink;

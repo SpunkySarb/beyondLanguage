@@ -76,6 +76,60 @@ public class French extends LanguageAttributes {
         return "frenchHome";
     }
     
+    //Dadhboard page
+
+
+    @Override
+    public String getTitle() {
+        // TODO Auto-generated method stub
+        return "vers l'application Beyond Language";
+    }
+
+    @Override
+    public String getPostMsg() {
+        // TODO Auto-generated method stub
+        return "Envoyer un message:";
+    }
+
+    @Override
+    public String getPostButton() {
+        // TODO Auto-generated method stub
+        return "PUBLIER";
+    }
+
+    @Override
+    public String getHint() {
+        // TODO Auto-generated method stub
+        return "Que pensez-vous écrire?";
+    }
+
+    @Override
+    public String getList() {
+        // TODO Auto-generated method stub
+        return "Vue en liste";
+    }
+
+    @Override
+    public String getGrid() {
+        // TODO Auto-generated method stub
+        return "Vue Grille";
+    }
+        
+
+        
+        
+        @Override
+        public String getSent() {
+            // TODO Auto-generated method stub
+            return "Le message a été posté ...";
+        }
+        
+        
+        @Override
+        public String getWelcome() {
+            return "Bienvenu ";
+        }
+        
     
     
 }

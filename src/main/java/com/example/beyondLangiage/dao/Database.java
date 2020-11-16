@@ -60,8 +60,28 @@ public static String getUsername(String email) {
 
 
 
+public static String getAllPosts() {
+    
+    String query= " select `user`, `en` , `pa`, `fr` from `multilingualdb`.`posts` order by time DESC ;";
+
+    
+    
+    
+    
+    return query;
+}
 
 
+public static String addPostQuery(String user, String msgEn, String msgPa, String msgFr) {
+    
+    String query= " INSERT INTO `multilingualdb`.`posts` ( `user`, `en`, `pa`, `fr`) VALUES ( '"+user+"', '"+msgEn+"', '"+msgPa+"', '"+msgFr+"');";
+
+    
+    
+    
+    
+    return query;
+}
     
     
     

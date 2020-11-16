@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 public class Posts {
 
     
-    private int postID;
-    private String en, fr, sp, ar, pa;
-    public int getPostID() {
-        return postID;
+    private String user;
+    private String en, fr, pa;
+    public String getUser() {
+        return user;
     }
-    public void setPostID(int postID) {
-        this.postID = postID;
+    public void setUser(String user) {
+        this.user = user;
     }
     public String getEn() {
         return en;
@@ -26,34 +26,12 @@ public class Posts {
     public void setFr(String fr) {
         this.fr = fr;
     }
-    public String getSp() {
-        return sp;
-    }
-    public void setSp(String sp) {
-        this.sp = sp;
-    }
-    public String getAr() {
-        return ar;
-    }
-    public void setAr(String ar) {
-        this.ar = ar;
-    }
     public String getPa() {
         return pa;
     }
     public void setPa(String pa) {
         this.pa = pa;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
 }
 
